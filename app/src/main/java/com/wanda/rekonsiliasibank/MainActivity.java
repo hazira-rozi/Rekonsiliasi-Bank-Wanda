@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = playBrowser.getSettings();
         webSettings.setBuiltInZoomControls(true);
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setPluginState(WebSettings.PluginState.ON);
         webSettings.setDefaultZoom(WebSettings.ZoomDensity.FAR);
         playBrowser.setWebViewClient(new CallBack());
         playBrowser.loadUrl("file:///android_asset/index.html");
