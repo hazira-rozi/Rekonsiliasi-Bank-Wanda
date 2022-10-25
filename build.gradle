@@ -1,9 +1,23 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+//buildscript {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven{url: url "https://maven.mozilla.org/maven2/"}
+//    }
+//}
+
 plugins {
     id 'com.android.application' version '7.3.0' apply false
     id 'com.android.library' version '7.3.0' apply false
-}
 
+}
+ext {
+    geckoview_channel = "nightly"
+    geckoview_version = "70.0.20190712095934"
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
